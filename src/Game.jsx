@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
-import { DndContext } from '@dnd-kit/core';
-import { toast, ToastContainer } from 'react-toastify';
+import { useState, useEffect } from "react";
+import { DndContext } from "@dnd-kit/core";
+import { toast, ToastContainer } from "react-toastify";
 
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
-import './App.css';
-import Tower from './Tower';
-import { disc as initialDiscs } from '../assets/disc';
+import { disc as initialDiscs } from "../assets/disc";
+import Tower from "./Tower";
+import "./App.css";
+import styles from "./Game.module.css";
 
 export default function Game() {
     const [parent, setParent] = useState(null);
@@ -51,13 +52,11 @@ export default function Game() {
         const sourceTower = towerState[sourceTowerId];
         const targetTower = towerState[targetTowerId];
 
-        // Check if the move is valid
         if (targetTower.length > 0 && discId > targetTower[targetTower.length - 1].id) {
             screamAtUser();
             return;
         }
 
-        // Move the disc
         const discToMove = sourceTower.find(d => d.id === discId);
         const updatedSourceTower = sourceTower.filter(d => d.id !== discId);
         const updatedTargetTower = [...targetTower, discToMove];
@@ -72,7 +71,7 @@ export default function Game() {
     }
 
     return (
-        <main className="game">
+        <main className={styles.game}>
             <ToastContainer />
             <DndContext onDragEnd={handleDragEnd}>
                 <Tower towerId="t1" discs={towerState.t1} />
