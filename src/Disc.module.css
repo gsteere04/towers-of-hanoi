@@ -1,18 +1,18 @@
 .discImage {
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
   }
   
   .size50 {
-    width: 50px; /* Example width for size 50 disc */
+    width: 50px; 
   }
   
   .size75 {
-    width: 75px; /* Example width for size 75 disc */
+    width: 75px; 
   }
   
   .size100 {
-    width: 100px; /* Example width for size 100 disc */
+    width: 100px; 
   }
   
-  /* Add more classes for other sizes as needed */
+ 
   
