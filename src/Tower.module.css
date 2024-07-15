@@ -4,8 +4,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    height: 20em;
-    width: 400px;
+    height: 35vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,18 +15,8 @@
   
   .discContainer {
     display: flex;
-    flex-direction: column; /* Stack discs vertically */
-    align-items: center; /* Center discs horizontally */
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 45px;
   }
   
-  .size50 {
-    max-width: 50px; /* Example maximum width for size 50 disc */
-  }
-  
-  .size75 {
-    max-width: 75px; /* Example maximum width for size 75 disc */
-  }
-  
-  .size100 {
-    max-width: 100px; /* Example maximum width for size 100 disc */
-  }
