@@ -1,13 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 60vh; /* Adjust based on your design */
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+header, footer {
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }

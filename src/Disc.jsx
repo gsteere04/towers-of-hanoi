@@ -1,16 +1,29 @@
-export default function Disc({ image, positionStyle, size }) {
-    const innerDivStyles = {
-        backgroundImage: `url(${image})`,
-        backgroundSize: '100% 50px',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        position: 'absolute',
-        width: `${size}px`,
-        height: `50px`,
-        ...positionStyle,
-    };
+import { useDraggable } from '@dnd-kit/core';
+import { CSS } from '@dnd-kit/utilities';
+import styles from "./Disc.module.css"; // Assuming you have a separate CSS file for Disc
 
-    return (
-        <div className="disc" style={innerDivStyles}></div>
-    );
+export default function Disc({ disc, isTopDisc, width }) {
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
+    id: disc.id,
+    disabled: !isTopDisc,
+  });
+
+  const style = {
+    transform: CSS.Translate.toString(transform),
+    width: `${width}px`, // Set the width dynamically based on prop
+    height: "auto", // Maintain aspect ratio
+  };
+
+  return (
+    <img
+      src={disc.disc}
+      alt={"Disc"}
+      ref={setNodeRef}
+      className={`${styles.discImage} ${styles[`size${width}`]}`} // Apply size class dynamically
+      style={style}
+      draggable={false}
+      {...listeners}
+      {...attributes}
+    />
+  );
 }

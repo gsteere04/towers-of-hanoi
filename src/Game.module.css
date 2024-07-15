@@ -1,6 +1,8 @@
-.styles {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  justify-items: center;
+  height: 200px;
+  width: 800px;
+}

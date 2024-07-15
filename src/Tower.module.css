@@ -1,0 +1,32 @@
+.tower {
+    background-image: url('./assets/tower.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 20em;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: false;
+  }
+  
+  .discContainer {
+    display: flex;
+    flex-direction: column; /* Stack discs vertically */
+    align-items: center; /* Center discs horizontally */
+  }
+  
+  .size50 {
+    max-width: 50px; /* Example maximum width for size 50 disc */
+  }
+  
+  .size75 {
+    max-width: 75px; /* Example maximum width for size 75 disc */
+  }
+  
+  .size100 {
+    max-width: 100px; /* Example maximum width for size 100 disc */
+  }
