@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-import { discs } from "../assets/discs";
+import { discs } from "./assets/discs";
 import Tower from "./Tower";
 
 export default function Game() {
